@@ -24,7 +24,6 @@ public class LdrController {
     public LdrController() throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("192.168.1.240");
-
         connection = factory.newConnection();
         channel = connection.createChannel();
     }
@@ -35,7 +34,6 @@ public class LdrController {
     public String getLdrs(){
         System.out.println("Getting all LDR'S");
         String result = sendMessage("EasyLiving","GetAllLdr","anything");
-
         return result;
     }
 
