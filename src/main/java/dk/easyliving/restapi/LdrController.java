@@ -33,9 +33,10 @@ public class LdrController {
 
     @RequestMapping("/ldr")
     public String getLdrs(){
+        System.out.println("Getting all LDR'S");
+        String result = sendMessage("EasyLiving","GetAllLdr","anything");
 
-
-        return "Hejsa";
+        return result;
     }
 
 
