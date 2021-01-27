@@ -45,6 +45,12 @@ public class LdrController {
         return result;
     }
 
+    @DeleteMapping("/ldr")
+    public String removeLdrSensor(@RequestBody LdrSensor tempLdrSensor){
+        String result = sendMessage("EasyLiving","RemoveLdrSensor",tempLdrSensor.getMacAdd());
+        return result;
+    }
+
 
 
     public static String sendMessage(String exchange, String topic, String message){
